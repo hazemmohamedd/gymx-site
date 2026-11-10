@@ -1,0 +1,141 @@
+:root{
+  --ink:#111111;--ink-2:#1C1C1C;--muted:#5E6470;--line:#E7E5DF;--ground:#F7F6F2;--surface:#FFFFFF;
+  --brand:#FFC20E;--brand-dark:#E0A800;--brand-tint:#FFF4CC;--on-brand:#111111;--on-dark:#B9BCC4;
+  --ok:#0F7A55;--ok-tint:#E1F2EA
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--ground);color:var(--ink);font-family:"IBM Plex Sans Arabic","Segoe UI",Tahoma,Arial,sans-serif;line-height:1.85;font-size:16px}
+a{color:inherit}
+.wrap{max-width:1040px;margin:0 auto;padding:0 16px}
+
+/* header */
+header{background:var(--ink);color:#fff;position:sticky;top:0;z-index:10;border-bottom:1px solid #222}
+header .wrap{display:flex;align-items:center;justify-content:space-between;gap:12px;min-height:64px;flex-wrap:wrap}
+.brand{font-weight:800;font-size:24px;letter-spacing:.3px;text-decoration:none;color:#fff;display:flex;align-items:center;gap:8px}
+.brand i{display:inline-block;width:12px;height:12px;border-radius:3px;background:var(--brand);transform:rotate(45deg)}
+.brand span{color:var(--brand)}
+nav{display:flex;flex-wrap:wrap;gap:4px 18px}
+nav a{color:var(--on-dark);text-decoration:none;font-size:15px;padding:6px 0}
+nav a:hover,nav a.on{color:var(--brand)}
+
+/* hero */
+.hero{background:radial-gradient(ellipse at 50% 0%,#2a2410 0%,var(--ink) 60%);color:#fff;padding:64px 16px 72px;text-align:center}
+.hero h1{margin:0 auto 14px;font-size:38px;line-height:1.35;max-width:760px}
+.hero h1 span{color:var(--brand)}
+.hero p{margin:0 auto;color:var(--on-dark);font-size:18px;max-width:680px}
+.hero .cta{margin-top:28px;display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+.pill{display:inline-block;background:var(--brand);color:var(--on-brand);padding:4px 14px;border-radius:999px;font-weight:700;font-size:14px;margin-bottom:16px}
+.btn{display:inline-block;padding:12px 26px;border-radius:12px;font-weight:700;text-decoration:none;font-size:16px}
+.btn.primary{background:var(--brand);color:var(--on-brand)}
+.btn.primary:hover{background:var(--brand-dark)}
+.btn.ghost{border:1px solid #3a3a3a;color:#fff}
+
+/* page title band (inner pages) */
+.band{background:var(--ink);color:#fff;padding:40px 16px 44px}
+.band h1{margin:0;font-size:32px}
+.band p{margin:6px 0 0;color:var(--on-dark)}
+
+section{padding:44px 0}
+h2{margin:0 0 18px;font-size:26px}
+.sub{color:var(--muted);margin:-8px 0 22px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:20px}
+.card h3{margin:0 0 6px;font-size:18px}
+.card h3 b{display:inline-grid;place-items:center;width:30px;height:30px;border-radius:9px;background:var(--brand-tint);color:var(--ink);font-size:15px;margin-inline-end:8px}
+.card p{margin:0;color:var(--muted);font-size:15px}
+
+/* pricing */
+.price-card{background:var(--surface);border:2px solid var(--brand);border-radius:20px;padding:28px;max-width:520px;margin:0 auto;box-shadow:0 12px 32px rgba(0,0,0,.06)}
+.price-card .tag{display:inline-block;background:var(--brand-tint);border-radius:999px;padding:2px 12px;font-size:13px;font-weight:700}
+.price-card h3{margin:10px 0 4px;font-size:22px}
+.price{font-size:46px;font-weight:800;line-height:1.2;margin:8px 0}
+.price small{font-size:17px;font-weight:600;color:var(--muted)}
+.checks{list-style:none;padding:0;margin:16px 0 22px}
+.checks li{padding:6px 0;padding-inline-start:30px;position:relative;color:#2b2b2b}
+.checks li::before{content:"";position:absolute;inset-inline-start:0;top:12px;width:18px;height:18px;border-radius:50%;background:var(--ok-tint) no-repeat center/12px url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='none' stroke='%230F7A55' stroke-width='3' d='M5 12l5 5 9-10'/%3E%3C/svg%3E")}
+.note{background:var(--brand-tint);border-radius:14px;padding:14px 18px;color:#3a3200;font-size:15px}
+table.plain{width:100%;border-collapse:collapse;background:var(--surface);border:1px solid var(--line);border-radius:14px;overflow:hidden}
+table.plain th,table.plain td{text-align:start;padding:12px 14px;border-bottom:1px solid var(--line);font-size:15px}
+table.plain th{background:#FAF9F5;font-weight:700}
+
+/* docs */
+.doc{max-width:820px}
+.doc h2{margin-top:30px;font-size:21px}
+.doc p,.doc li{color:#2b2b2b}
+.doc ul{padding-inline-start:22px}
+.en{direction:ltr;text-align:left;color:var(--muted);font-size:15px;border-top:1px dashed var(--line);margin-top:28px;padding-top:14px}
+
+/* contact */
+.contact-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px}
+.contact-item{background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:20px}
+.contact-item .k{color:var(--muted);font-size:14px}
+.contact-item .v{font-size:18px;font-weight:700;word-break:break-word}
+.contact-item a{text-decoration:none}
+.ltr{direction:ltr;unicode-bidi:isolate;display:inline-block}
+
+/* footer */
+footer{background:var(--ink);color:var(--on-dark);padding:34px 0 26px;margin-top:20px;font-size:14px}
+footer .cols{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:18px}
+footer h4{color:#fff;margin:0 0 8px;font-size:15px}
+footer a{color:var(--on-dark);text-decoration:none;display:block;padding:2px 0}
+footer a:hover{color:var(--brand)}
+footer .copy{border-top:1px solid #262626;margin-top:22px;padding-top:16px;text-align:center}
+
+@media (max-width:640px){
+  .hero h1{font-size:28px}
+  .band h1{font-size:26px}
+  .price{font-size:38px}
+  nav{gap:2px 14px}
+  nav a{font-size:14px}
+}
+
+/* ---- v2: fonts, brand, hero with real screens, icons, gallery ---- */
+body{font-family:"IBM Plex Sans Arabic","Segoe UI",Tahoma,Arial,sans-serif}
+h1,h2,h3,.brand,.price,.btn{font-family:"Readex Pro","IBM Plex Sans Arabic",sans-serif}
+.brand{direction:ltr}
+.brand b{font-weight:700}
+.brand .mark{flex:none}
+footer .brand{color:#fff;display:inline-flex}
+
+.hero{text-align:start;padding:56px 16px 72px;overflow:hidden}
+.hero-grid{display:grid;grid-template-columns:1.05fr 1fr;gap:36px;align-items:center}
+.hero h1{margin:0 0 14px;max-width:none;font-size:42px}
+.hero p{margin:0;max-width:540px}
+.hero .cta{justify-content:flex-start}
+.hero-points{list-style:none;padding:0;margin:22px 0 0;display:flex;flex-wrap:wrap;gap:8px 18px;color:#d8d9dd;font-size:15px}
+.hero-points li::before{content:"✓";color:var(--brand);font-weight:700;margin-inline-end:6px}
+.hero-visual{position:relative;min-height:380px}
+.hero-visual .desk{width:100%;border-radius:14px;border:1px solid #2b2b2b;box-shadow:0 30px 60px rgba(0,0,0,.45);display:block}
+.hero-visual .phone{position:absolute;width:30%;border-radius:22px;border:6px solid #1d1d1d;box-shadow:0 20px 40px rgba(0,0,0,.55);background:#fff}
+.hero-visual .p1{inset-inline-start:-6%;bottom:-40px}
+.hero-visual .p2{inset-inline-start:24%;bottom:-64px;width:27%}
+
+.card .ic{display:inline-grid;place-items:center;width:46px;height:46px;border-radius:13px;background:var(--brand-tint);color:var(--ink);margin-bottom:12px}
+.card .ic svg{width:24px;height:24px}
+
+.gallery{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:18px}
+.shot{margin:0;background:var(--surface);border:1px solid var(--line);border-radius:16px;overflow:hidden}
+.shot img{width:100%;height:auto;display:block;border-bottom:1px solid var(--line)}
+.shot figcaption{padding:10px 14px;font-weight:600;font-size:15px}
+
+.price-band{display:flex;align-items:center;justify-content:space-between;gap:18px;flex-wrap:wrap;background:var(--ink);color:#fff;border-radius:20px;padding:28px 30px;margin:20px 0 40px}
+.price-band p{color:var(--on-dark)}
+.btn.wa{background:#25D366;color:#fff;padding:8px 18px;font-size:14px;display:inline-block}
+
+@media (max-width:860px){
+  .hero-grid{grid-template-columns:1fr}
+  .hero-visual{min-height:0;margin-bottom:60px}
+  .hero h1{font-size:30px}
+}
+.hero-visual img{height:auto}
+.hero-visual{padding-bottom:70px}
+.hero-visual .phone{width:24%;border-width:5px;border-radius:20px}
+.hero-visual .p1{inset-inline-start:-4%;bottom:0}
+.hero-visual .p2{inset-inline-start:18%;bottom:-20px;width:22%}
+@media (max-width:860px){.hero-visual{padding-bottom:90px}}
+.hero-grid{grid-template-columns:minmax(0,1.05fr) minmax(0,1fr)}
+.hero-grid > *{min-width:0}
+img{max-width:100%}
+@media (max-width:860px){.hero-grid{grid-template-columns:minmax(0,1fr)}}
+@media (max-width:640px){header .wrap{padding-block:8px}.brand{font-size:21px}}
